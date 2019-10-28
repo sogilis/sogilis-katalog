@@ -1,0 +1,10 @@
+# You can write comments in this file
+# Follow this format to describe test cases
+#input:expected_result
+
+# Zero was not invented yet :)
+:
+I:1
+II:2
+III:3
+IIII:4

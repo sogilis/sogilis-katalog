@@ -1,0 +1,3 @@
+[submodule "roman_numerals/simple_kata_tester"]
+	path = roman_numerals/simple_kata_tester
+	url = git@github.com:VLambret/simple_kata_tester.git
