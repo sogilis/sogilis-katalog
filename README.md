@@ -1,13 +1,17 @@
-# multilingual-kata
-Exploration of solving a problem with different languages
+# Sogilis Katalog
 
-## Principle
+This repository purpose is to contain katas used to animate dojos in Sogilis
 
-1. Take a " simple " problem.
-2. Solve it in you favorite language (or simply the one you want to use).
-3. Commit it to the repository (with a PR please), as soon as you're happy with your work.
-4. Come to the quick meeting to present your solution.
+## Usage
 
-## Exercises
+Choose a kata, a language and start hacking !
 
-1. [Anagrams](https://github.com/sogilis/multilingual-kata/tree/master/1-anagrams)
+## Contributing
+
+If you submit a new kata, please respect the `kata_name/language` organization
+
+You can also add a new langage to an existing kata. In that case indicate the langage you used as a reference if it's relevant.
+
+## Licence
+
+Work In Progress (it's not a licence name ! ^_^)
