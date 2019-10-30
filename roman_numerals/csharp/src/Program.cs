@@ -1,18 +1,17 @@
 ﻿using System;
 
-namespace roman_numerals
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        int count = -1;
+        while (Console.Read() != -1)
         {
-            int count = -1;
-            int i;
-            while ((i = Console.Read()) != -1)
-            {
-                count++;
-            }
-            Console.WriteLine(count == 0 ? "" : count.ToString());
+            count++;
+        }
+        if(count > 0)
+        {
+            Console.WriteLine(count);
         }
     }
 }
