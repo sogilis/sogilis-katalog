@@ -6,7 +6,13 @@ namespace roman_numerals
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new RomanNumeral(Console.ReadLine()).ToDecimal());
+            int count = -1;
+            int i;
+            while ((i = Console.Read()) != -1)
+            {
+                count++;
+            }
+            Console.WriteLine(count == 0 ? "" : count.ToString());
         }
     }
 }
