@@ -1,4 +1,4 @@
-.PHONY : all test clean
+.PHONY : all compile clean post_compile test 
 
 RELEASE_DIR=bin/Release
 BIN_NAME=roman_numerals
