@@ -2,7 +2,7 @@
 
 gnatmake:
 ```bash
-apt install gnatmake
+apt install gnat
 ```
 
 ### Build
