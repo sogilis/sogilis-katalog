@@ -1,7 +1,8 @@
 ### Dependency
 
+gnatmake:
 ```bash
-gnatmake
+apt install gnatmake
 ```
 
 ### Build
