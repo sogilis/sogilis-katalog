@@ -1,0 +1,7 @@
+[package]
+name = "roman_numerals"
+version = "0.1.0"
+authors = ["Raboliot Le Gris <jordan@raboland.fr>"]
+edition = "2018"
+
+[dependencies]
