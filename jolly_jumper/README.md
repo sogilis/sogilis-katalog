@@ -5,7 +5,7 @@
 Le but de ce programme et de déterminer si une séquence correspond aux règles suivantes :
 
 * *n* étant le nombre d'éléments de la suite.
-* Les valeurs absolues des différences successives des élements doivent faire partie de l'interval 1..*n-1*.
+* Les valeurs absolues des différences successives des élements doivent faire partie de l'intervalle 1..*n-1*.
 * Toutes les différences successives doivent être uniques.
 
 ## Exemples
