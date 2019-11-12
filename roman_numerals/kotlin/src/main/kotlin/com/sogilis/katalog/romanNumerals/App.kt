@@ -1,5 +1,8 @@
 package com.sogilis.katalog.romanNumerals
 
-fun main(args: Array<String>) {
-    println(readLine()?.length)
+fun main() {
+    val input = readLine()
+    if (input != null && input.isNotEmpty()){
+        println(input.length)
+    }
 }
