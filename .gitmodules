@@ -1,6 +1,6 @@
 [submodule "roman_numerals/simple_kata_tester"]
 	path = roman_numerals/simple_kata_tester
-	url = git@github.com:VLambret/simple_kata_tester.git
+	url = https://github.com/VLambret/simple_kata_tester.git
 [submodule "jolly_jumper/simple_kata_tester"]
 	path = jolly_jumper/simple_kata_tester
-	url = git@github.com:VLambret/simple_kata_tester.git
+	url = https://github.com/VLambret/simple_kata_tester.git
