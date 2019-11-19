@@ -21,3 +21,9 @@ cd /home/java
 1- Run tests with `./gradlew test`
 
 2- Hack `App.java` in `src/main/java`
+
+# How to generate Eclipse configuration files?
+
+```bash
+./gradlew eclipse
+```
