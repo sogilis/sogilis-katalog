@@ -27,3 +27,7 @@ cd /home/java
 ```bash
 ./gradlew eclipse
 ```
+
+# Known bug
+
+On `Windows` OS, `SystemExtension.getOutput()` does not return trailing carriage return.
