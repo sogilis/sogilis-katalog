@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumerals", "RomanNumerals.csproj", "{A3071963-D254-40A6-86EC-8902E1E1C94D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3071963-D254-40A6-86EC-8902E1E1C94D}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{A3071963-D254-40A6-86EC-8902E1E1C94D}.Debug|anycpu.Build.0 = Debug|anycpu
+		{A3071963-D254-40A6-86EC-8902E1E1C94D}.Release|anycpu.ActiveCfg = Release|anycpu
+		{A3071963-D254-40A6-86EC-8902E1E1C94D}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
