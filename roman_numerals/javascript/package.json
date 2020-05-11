@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "Romanian numbers exercise",
   "main": "src/index.js",
-  "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.0.2"
-  },
   "devDependencies": {
-    "chai": "^4.1.7",
-    "mocha": "^2.4.5"
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
   },
   "scripts": {
-    "build": "tsc src/*.js",
+    "start": "node src/index.js",
     "test": "npm run unit",
     "unit": "mocha test/romanian.spec.js"
   },
