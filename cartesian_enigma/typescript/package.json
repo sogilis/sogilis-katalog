@@ -1,0 +1,19 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/decoder.js",
+    "test": "npm run build && mocha dist/test/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.1",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1"
+  },
+  "dependencies": {}
+}
