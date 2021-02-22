@@ -1,0 +1,6 @@
+# You can write comments in this file
+# Follow this format to describe test cases
+#input:expected_result
+
+0:0
+1 1 +:2
