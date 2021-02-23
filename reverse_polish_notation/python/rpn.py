@@ -2,23 +2,25 @@
 
 import sys
 
+operators = {
+   "+": lambda stack: stack.pop() + stack.pop(),
+   "-": lambda stack: -stack.pop() + stack.pop(),
+   "/": lambda stack: 1 / (stack.pop() / stack.pop())
+}
+
 def main():
-  add = lambda a, b: a + b
-  subtract = lambda a, b: a - b
-  operators = {}
-  operators['+']=add
-  operators['-']=subtract
   stack = []
+
   for line in sys.stdin:
     elements = line.rstrip('\n').split(" ")
-    for element in elements: 
-      if element == '+' or element == '-':
-        n1 = stack.pop()
-        n2 = stack.pop()
-        op = operators[element]
-        stack.append(op(n2,n1))
-      else:
-        stack.append(int(element))
+    
+  for element in elements: 
+    if element in operators:
+      result = operators[element](stack)
+    else:
+      result = element
+    stack.append(int(result))
+  
   print(stack.pop())
 
 if __name__== "__main__":
