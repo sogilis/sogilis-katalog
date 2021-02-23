@@ -7,12 +7,15 @@ def main():
   for line in sys.stdin:
     elements = line.rstrip('\n').split(" ")
     for element in elements: 
-      if element != '+':
-        stack.append(int(element))
-      else:
+      if element == '+' or element == '-':
         n1 = stack.pop()
         n2 = stack.pop()
-        stack.append(n1+n2)
+        if element == '+':
+          stack.append(n2+n1)
+        else:
+          stack.append(n2-n1)
+      else:
+        stack.append(int(element))
   print(stack.pop())
 
 if __name__== "__main__":
