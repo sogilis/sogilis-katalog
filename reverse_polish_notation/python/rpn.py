@@ -4,7 +4,11 @@ import sys
 
 def main():
   for line in sys.stdin:
-    print(line)
+    elements = line.split(" ")
+    if len(elements)==1 :
+      print(elements[0])
+    else:
+      print(int(elements[0]) + int(elements[1]))
 
 if __name__== "__main__":
   main()
