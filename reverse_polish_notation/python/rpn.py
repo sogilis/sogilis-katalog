@@ -3,12 +3,17 @@
 import sys
 
 def main():
+  stack = []
   for line in sys.stdin:
-    elements = line.split(" ")
-    if len(elements)==1 :
-      print(elements[0])
-    else:
-      print(int(elements[0]) + int(elements[1]))
+    elements = line.rstrip('\n').split(" ")
+    for element in elements: 
+      if element != '+':
+        stack.append(int(element))
+      else:
+        n1 = stack.pop()
+        n2 = stack.pop()
+        stack.append(n1+n2)
+  print(stack.pop())
 
 if __name__== "__main__":
   main()
