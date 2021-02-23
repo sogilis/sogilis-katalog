@@ -3,6 +3,11 @@
 import sys
 
 def main():
+  add = lambda a, b: a + b
+  subtract = lambda a, b: a - b
+  operators = {}
+  operators['+']=add
+  operators['-']=subtract
   stack = []
   for line in sys.stdin:
     elements = line.rstrip('\n').split(" ")
@@ -10,10 +15,8 @@ def main():
       if element == '+' or element == '-':
         n1 = stack.pop()
         n2 = stack.pop()
-        if element == '+':
-          stack.append(n2+n1)
-        else:
-          stack.append(n2-n1)
+        op = operators[element]
+        stack.append(op(n2,n1))
       else:
         stack.append(int(element))
   print(stack.pop())
