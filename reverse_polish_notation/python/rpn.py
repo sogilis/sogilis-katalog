@@ -3,7 +3,8 @@
 import sys
 
 def main():
-    print("0");
+  for line in sys.stdin:
+    print(line)
 
 if __name__== "__main__":
   main()
