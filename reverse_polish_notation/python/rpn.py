@@ -2,18 +2,22 @@
 
 import sys
 import re
+
 def main():
   for line in sys.stdin:
-    operator = findOperator(line)
-    elements = re.split('\+|-',line)
+    print(eval(line))
+
+def eval(expression):
+  operator = findOperator(expression)
+  if operator == "none":
+    return int(expression)
+  else:
+    elements = expression.split(operator)
     elements = list(map(int, elements))
-    if operator == "none":
-      print(elements[0])
-    else:
-      if operator == '+':
-        print(sum(elements))
-      elif operator == '-': 
-        print(elements[0]-elements[1])
+    if operator == '+':
+      return sum(elements)
+    elif operator == '-': 
+      return elements[0]-elements[1]
 
 def findOperator(line):
   if line.find("+") != -1:
