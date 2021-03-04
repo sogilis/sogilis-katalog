@@ -4,10 +4,10 @@ import sys
 import re
 def main():
   for line in sys.stdin:
-    operator = line[1]
+    operator = findOperator(line)
     elements = re.split('\+|-',line)
     element0 = int(elements[0])
-    if len(elements) == 1:
+    if operator == "none":
       print(element0)
     else:
       element1 = int(elements[1])
@@ -15,6 +15,13 @@ def main():
         print(element0+element1)
       elif operator == '-': 
         print(element0-element1)
+
+def findOperator(line):
+  if line.find("+") != -1:
+    return '+'
+  if line.find("-") != -1:
+    return '-'
+  return "none"
 
 
 if __name__== "__main__":
