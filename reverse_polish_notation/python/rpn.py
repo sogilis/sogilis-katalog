@@ -17,12 +17,16 @@ def eval(expression):
       return eval(elements[0])+eval(elements[1])
     elif operator == '-': 
       return eval(elements[0])-eval(elements[1])
+    elif operator == '*': 
+      return eval(elements[0])*eval(elements[1])
 
 def findOperator(line):
   if line.find("+") != -1:
     return '+'
   if line.find("-") != -1:
     return '-'
+  if line.find("*") != -1:
+    return '*'
   return "none"
 
 
