@@ -22,13 +22,16 @@ def eval(expression):
     return float(expression)
   else:
     elements = expression.split(operator, 1)
-    if operator == '+':
-      return eval(elements[0])+eval(elements[1])
-    elif operator == '-': 
-      return eval(elements[0])-eval(elements[1])
-    elif operator == '*': 
-      return eval(elements[0])*eval(elements[1])
-    elif operator == '/': 
+    if is_unary_operator(elements):
+      return float(-2)
+    else:
+      if operator == '+':
+        return eval(elements[0])+eval(elements[1])
+      elif operator == '-': 
+        return eval(elements[0])-eval(elements[1])
+      elif operator == '*': 
+        return eval(elements[0])*eval(elements[1])
+      elif operator == '/': 
         return eval(elements[0])/eval(elements[1])
 
 def find_lowest_precedence_operator(line):
@@ -39,6 +42,8 @@ def find_lowest_precedence_operator(line):
   
   return "none"
 
+def is_unary_operator(elements):
+  return len(elements[0]) == 0
 
 if __name__== "__main__":
   main()
