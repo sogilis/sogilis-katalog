@@ -5,12 +5,17 @@ import re
 
 def main():
   for line in sys.stdin:
-    print(eval(line))
+    print(format(eval(line)))
+
+def format(result):
+  if result.is_integer():
+    return int(result)
+  return result
 
 def eval(expression):
   operator = find_lowest_precedence_operator(expression)
   if operator == "none":
-    return int(expression)
+    return float(expression)
   else:
     elements = expression.split(operator, 1)
     if operator == '+':
@@ -20,7 +25,7 @@ def eval(expression):
     elif operator == '*': 
       return eval(elements[0])*eval(elements[1])
     elif operator == '/': 
-      return eval(elements[0])//eval(elements[1])
+      return eval(elements[0])/eval(elements[1])
 
 def find_lowest_precedence_operator(line):
   operators_prioritized = ["/", "*", "-", "+"]
