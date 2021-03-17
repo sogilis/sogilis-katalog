@@ -23,7 +23,7 @@ def eval(expression):
   else:
     elements = expression.split(operator, 1)
     if is_unary_operator(elements):
-      return float(-2)
+      return -float(elements[1])
     else:
       if operator == '+':
         return eval(elements[0])+eval(elements[1])
