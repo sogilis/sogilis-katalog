@@ -19,9 +19,11 @@ def eval(expression):
       return eval(elements[0])-eval(elements[1])
     elif operator == '*': 
       return eval(elements[0])*eval(elements[1])
+    elif operator == '/': 
+      return eval(elements[0])//eval(elements[1])
 
 def find_lowest_precedence_operator(line):
-  operators_prioritized = ["*", "-", "+"]
+  operators_prioritized = ["/", "*", "-", "+"]
   for op in reversed(operators_prioritized):
     if line.find(op) != -1:
       return op
