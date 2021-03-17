@@ -5,7 +5,10 @@ import re
 
 def main():
   for line in sys.stdin:
-    print(format(eval(line)))
+    try:
+      print(format(eval(line)))
+    except ZeroDivisionError:
+      print("Error_Division_By_0")
 
 def format(result):
   if result.is_integer():
@@ -26,7 +29,7 @@ def eval(expression):
     elif operator == '*': 
       return eval(elements[0])*eval(elements[1])
     elif operator == '/': 
-      return eval(elements[0])/eval(elements[1])
+        return eval(elements[0])/eval(elements[1])
 
 def find_lowest_precedence_operator(line):
   operators_prioritized = ["/", "*", "-", "+"]
