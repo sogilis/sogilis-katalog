@@ -10,7 +10,8 @@ def main():
 def format(result):
   if result.is_integer():
     return int(result)
-  return result
+
+  return round(result, 5)
 
 def eval(expression):
   operator = find_lowest_precedence_operator(expression)
