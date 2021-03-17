@@ -12,12 +12,11 @@ def eval(expression):
   if operator == "none":
     return int(expression)
   else:
-    elements = expression.split(operator)
-    elements = list(map(int, elements))
+    elements = expression.split(operator, 1)
     if operator == '+':
-      return sum(elements)
+      return eval(elements[0])+eval(elements[1])
     elif operator == '-': 
-      return elements[0]-elements[1]
+      return eval(elements[0])-eval(elements[1])
 
 def findOperator(line):
   if line.find("+") != -1:
