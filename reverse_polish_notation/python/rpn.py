@@ -8,7 +8,7 @@ def main():
     print(eval(line))
 
 def eval(expression):
-  operator = findOperator(expression)
+  operator = find_lowest_precedence_operator(expression)
   if operator == "none":
     return int(expression)
   else:
@@ -20,13 +20,12 @@ def eval(expression):
     elif operator == '*': 
       return eval(elements[0])*eval(elements[1])
 
-def findOperator(line):
-  if line.find("+") != -1:
-    return '+'
-  if line.find("-") != -1:
-    return '-'
-  if line.find("*") != -1:
-    return '*'
+def find_lowest_precedence_operator(line):
+  operators_prioritized = ["*", "-", "+"]
+  for op in reversed(operators_prioritized):
+    if line.find(op) != -1:
+      return op
+  
   return "none"
 
 
