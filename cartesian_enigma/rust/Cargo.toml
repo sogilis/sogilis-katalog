@@ -1,0 +1,7 @@
+[package]
+name = "cartesian_enigma"
+version = "0.1.0"
+authors = ["Mathieu WILLAY <matt.willay@gmail.com>"]
+edition = "2021"
+
+[dependencies]
