@@ -14,7 +14,7 @@ fn main() {
 
 }
 
-fn cartesian_decoder(mut input: &String) -> String {
+fn cartesian_decoder(input: &String) -> String {
     input.to_string()
 }
 
