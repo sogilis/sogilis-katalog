@@ -1,6 +1,7 @@
 ## Run the program
 
-`python3 Roman2Decimal.py.py`
+`python3 Roman2Decimal.py`
+
 
 ## Run the tests
 
