@@ -26,6 +26,10 @@ class Receipt:
     def add_discount(self, discount):
         self._discounts.append(discount)
 
+    def total_printed_price(self):
+        price = self.total_price()
+        return "%.2f" % price
+
     @property
     def items(self):
         return self._items[:]
