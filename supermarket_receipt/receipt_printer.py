@@ -1,4 +1,5 @@
-from model_objects import ProductUnit
+from product import ProductUnit
+
 
 class ReceiptPrinter:
 

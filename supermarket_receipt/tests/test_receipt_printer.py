@@ -2,7 +2,9 @@ import unittest
 
 from approvaltests import verify
 
-from model_objects import Product, SpecialOfferType, ProductUnit, Discount
+from product import Product, ProductUnit
+from discount import Discount
+from offer import SpecialOfferType
 from receipt import Receipt
 from receipt_printer import ReceiptPrinter
 

@@ -1,4 +1,4 @@
-from model_objects import Offer
+from offer import Offer
 from receipt import Receipt
 
 
