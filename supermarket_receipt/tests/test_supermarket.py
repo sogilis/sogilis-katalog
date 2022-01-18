@@ -43,7 +43,7 @@ class SupermarketTest(unittest.TestCase):
         self.assertEqual("3.98", receipt.total_printed_price())
         verify(ReceiptPrinter(40).print_receipt(receipt))
 
-    def test_buy_two_get_one_free(self):
+    def test_buy_three_get_one_free(self):
         self.the_cart.add_item(self.toothbrush)
         self.the_cart.add_item(self.toothbrush)
         self.the_cart.add_item(self.toothbrush)
