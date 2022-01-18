@@ -71,6 +71,12 @@ class SupermarketTest(unittest.TestCase):
         self.assertEqual("0.99", receipt.total_printed_price())
         verify(ReceiptPrinter(40).print_receipt(receipt))
 
+    def test_loose_weight_product_1kg5(self):
+        self.the_cart.add_item_quantity(self.apples, 1.5)
+        receipt = self.teller.checks_out_articles_from(self.the_cart)
+        self.assertEqual("2.98", receipt.total_printed_price())
+        verify(ReceiptPrinter(40).print_receipt(receipt))
+
     def test_percent_discount(self):
         self.the_cart.add_item(self.rice)
         self.teller.add_special_offer(SpecialOfferType.TEN_PERCENT_DISCOUNT, self.rice, 10.0)
@@ -98,6 +104,13 @@ class SupermarketTest(unittest.TestCase):
         self.teller.add_special_offer(SpecialOfferType.TWO_FOR_AMOUNT, self.apples, 2.00)
         receipt = self.teller.checks_out_articles_from(self.the_cart)
         self.assertEqual("3.99", receipt.total_printed_price())
+        verify(ReceiptPrinter(40).print_receipt(receipt))
+
+    def test_two_for_y_discount_with_loose_weight(self):
+        self.the_cart.add_item_quantity(self.apples, 3.5)
+        self.teller.add_special_offer(SpecialOfferType.TWO_FOR_AMOUNT, self.apples, 2.00)
+        receipt = self.teller.checks_out_articles_from(self.the_cart)
+        self.assertEqual("4.98", receipt.total_printed_price())
         verify(ReceiptPrinter(40).print_receipt(receipt))
 
     def test_two_for_y_discount_with_six(self):
