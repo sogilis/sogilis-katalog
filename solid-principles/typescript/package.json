@@ -1,0 +1,28 @@
+{
+  "name": "solid-kata-ts",
+  "version": "1.0.0",
+  "description": "Kata for practicing SOLID principles in TypeScript",
+  "main": "",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": [
+    "kata",
+    "solid",
+    "typescript"
+  ],
+  "author": "Carlos Martínez <carlosmartcast@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charliemc/solid-kata-ts.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.14",
+    "jest": "24.9.0",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.2"
+  }
+}
