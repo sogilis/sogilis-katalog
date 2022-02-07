@@ -4,6 +4,7 @@ from DependendClassCallDuringUnitTestException import *
 from Trip import *
 from TripService import TripService
 from UserNotLoggedInException import UserNotLoggedInException
+from User import User
 
 
 class TripServiceTest(TestCase):
@@ -11,7 +12,9 @@ class TripServiceTest(TestCase):
         pass
 
     def test_should_throw_an_exception_when_user_is_not_logged_in(self):
-        pass
+        tripService = TestableTripService()
+        self.assertRaises(UserNotLoggedInException,
+                          tripService.getTripsByUser, None)
 
     def test_should_not_return_any_trips_when_users_are_not_friends(self):
         pass
@@ -21,5 +24,5 @@ class TripServiceTest(TestCase):
 
 
 class TestableTripService(TripService):
-    def getTripsByUser(self, user):
-        pass
+    def getLoggedInUser(self):
+        return None
