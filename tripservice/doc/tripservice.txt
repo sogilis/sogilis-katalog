@@ -36,6 +36,11 @@ La difficulté est qu'il faut créer une méthode getLoggedInUser pour l'impleme
 
 Create the concept of a GUEST user to make test_should_throw_an_exception_when_user_is_not_logged_in clearer.
 
+== Tache 3:
+
+Trouve la branche la plus courte pas encore testé: implemente test_should_not_return_any_trips_when_users_are_not_friends.
+
+
 
 
 
