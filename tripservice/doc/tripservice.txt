@@ -40,6 +40,10 @@ Create the concept of a GUEST user to make test_should_throw_an_exception_when_u
 
 Trouve la branche la plus courte pas encore testé: implemente test_should_not_return_any_trips_when_users_are_not_friends.
 
+== Tache 3bis:
+
+Move tripService = TestableTripService() to the test setup.
+
 
 
 
