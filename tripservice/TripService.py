@@ -1,21 +1,20 @@
 from TripDAO import TripDAO
+from UserSession import UserSession
 from UserNotLoggedInException import UserNotLoggedInException
 
 
 class TripService:
-    def getFriendsTrips(self, friend, loggedInUser):
-        self.validate(loggedInUser)
-        if friend.isFriendsWith(loggedInUser):
-            return self.findTripsByUser(friend)
+    def getTripsByUser(self, user):
+        logged_user = UserSession.getInstance().getLoggedUser()
+        isFriend = False
+        tripList = []
+        if logged_user:
+            for friend in user.getFriends():
+                if friend is logged_user:
+                    isFriend = True
+                    break
+            if isFriend:
+                tripList = TripDAO.findTripsByUser(user)
+            return tripList
         else:
-            return self.noTrips()
-
-    def validate(self, loggedInUser):
-        if loggedInUser == None:
             raise UserNotLoggedInException()
-
-    def noTrips(self):
-        return []
-
-    def findTripsByUser(self, user):
-        return TripDAO.findTripsByUser(user)
