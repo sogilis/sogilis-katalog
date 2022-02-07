@@ -1,0 +1,80 @@
+@startuml
+
+title Supermarket receipt Class Diagram
+
+abstract SupermarketCatalog {
+}
+
+class FakeCatalog {
+  +add_product(product, price)
+  +unit_price(product): price
+  +products: map[product.name, product]
+  +prices: map[product.name, price]
+}
+
+class Product {
+ + name
+ + unit[EACH, KILO]
+}
+
+class ShoppingCart {
+ + add_item(product)
+ + add_item_quantity(product, quantity)
+ - _product_quantities: map[product, quantity]
+ + handle_offers(receipt, offers, catalog)
+}
+
+class ProductQuantity {
+ + product
+ + quantity
+}
+
+class Receipt {
++ add_product(product, quantity, price, total_price)
++ add_discount(discount)
+}
+
+class ReceiptItem {
+ + product
+ + quantity
+ + price
+ + total_price
+}
+
+class Discount {
+ + product
+ + description
+ + discount_amount
+}
+
+class Teller {
+ - offers: map[product, offer]
+ + add_special_offer(offer_type, product, argument)
+ + checks_out_articles_from(the_cart)
+
+}
+
+class Offer {
++ offer_type
++ product
++ argument
+}
+
+enum offer_type {
++ THREE_FOR_TWO 
++ TEN_PERCENT_DISCOUNT 
++ TWO_FOR_AMOUNT 
++ FIVE_FOR_AMOUNT
+}
+
+SupermarketCatalog <|-down- FakeCatalog
+FakeCatalog "1" *-down- "*" Product: products
+ProductQuantity "1" o-down- "1" Product: product
+ShoppingCart "1" *-down- "*" ProductQuantity: product_quantities
+Receipt "1" *-down- "*" ReceiptItem: items
+Receipt "1" *-down- "*" Discount: discounts
+Offer <|-down- offer_type
+Teller "1" *-down- "*" Offer: offers
+Teller "1" *-- "*" SupermarketCatalog: catalog
+
+@enduml
