@@ -32,6 +32,12 @@ test_should_throw_an_exception_when_user_is_not_logged_in:
 
 La difficulté est qu'il faut créer une méthode getLoggedInUser pour l'implementer dans votre TestableTripService.
 
+== Tache 2:
+
+Create the concept of a GUEST user to make test_should_throw_an_exception_when_user_is_not_logged_in clearer.
+
+
+
 
 
 
