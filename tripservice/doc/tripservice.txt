@@ -44,7 +44,11 @@ Trouve la branche la plus courte pas encore testé: implemente test_should_not_r
 
 Move tripService = TestableTripService() to the test setup.
 
+== Tache 4:
 
+Teste la dernière fonctionnalité: 
+test_should_return_friend_trips_when_users_are_friends
+Note: TripDAO should be extracted in a method again.
 
 
 

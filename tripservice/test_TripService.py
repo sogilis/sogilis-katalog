@@ -26,13 +26,22 @@ class TripServiceTest(TestCase):
         self.assertEqual(len(trips), 0, "no trips")
 
     def test_should_return_friend_trips_when_users_are_friends(self):
-        pass
+        self.tripService.setLoggedInUser(TripServiceTest.REGISTERED_USER)
+        friend = User()
+        friend.addFriend(TripServiceTest.ANOTHER_USER)
+        friend.addFriend(TripServiceTest.REGISTERED_USER)
+        friend.addTrip(TripServiceTest.TO_BRAZIL)
+        friend.addTrip(TripServiceTest.TO_LONDON)
+
+        trips = self.tripService.getTripsByUser(friend)
+        self.assertEqual(len(trips), 2, "two trips")
 
     GUEST = None
     UNUSED_USER = None
     REGISTERED_USER = User()
     ANOTHER_USER = User()
     TO_BRAZIL = Trip()
+    TO_LONDON = Trip()
 
 
 class TestableTripService(TripService):
@@ -41,3 +50,6 @@ class TestableTripService(TripService):
 
     def setLoggedInUser(self, logged_in_user):
         self.loggedInUser = logged_in_user
+
+    def findTripsByUser(self, user):
+        return user.getTrips()
