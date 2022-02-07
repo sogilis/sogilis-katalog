@@ -18,13 +18,22 @@ class TripServiceTest(TestCase):
                           tripService.getTripsByUser, TripServiceTest.UNUSED_USER)
 
     def test_should_not_return_any_trips_when_users_are_not_friends(self):
-        pass
+        tripService = TestableTripService()
+        tripService.setLoggedInUser(TripServiceTest.REGISTERED_USER)
+        friend = User()
+        friend.addFriend(TripServiceTest.ANOTHER_USER)
+        friend.addTrip(TripServiceTest.TO_BRAZIL)
+        trips = tripService.getTripsByUser(friend)
+        self.assertEqual(len(trips), 0, "no trips")
 
     def test_should_return_friend_trips_when_users_are_friends(self):
         pass
 
     GUEST = None
     UNUSED_USER = None
+    REGISTERED_USER = User()
+    ANOTHER_USER = User()
+    TO_BRAZIL = Trip()
 
 
 class TestableTripService(TripService):
