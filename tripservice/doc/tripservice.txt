@@ -2,18 +2,34 @@
 
 == Business Requirements
 
+Based on the kata by Sandro Mancuso:
+https://www.youtube.com/watch?v=_NnElPO5BU0
+
 Reseau sociale pour voyageurs
 
-. Pour voir du contenu utilisateur doit se connecter
+. Pour voir du contenu l'utilisateur doit se connecter
 . Pour voir les voyages (trips) de'un autre utilisateur, on doit etre son ami.
 
 
-== Tache 1
+== Explication:
 
 Pour pouvoir faire des changements dans le code on veut tester.
-Commence à tester la branche la plus courte
 
-getTripsByUser n'est pas testable, parce que un singleton logged_user est utilisé dans la fonction.
+ASTUCE : Commence à tester la branche la plus courte
+https://www.youtube.com/watch?v=_NnElPO5BU0&t=78s
+
+Explication: Si on commence de la branche la plus courte à tester jusqu'aux 
+branches les plus longues, lentement on comprends notre code. Si on commencait avec la branche la plus longue,
+le setup du tests serait trop compliqué.
+
+== Tache 1:
+
+Trouve la branche la plus courte dans TripService.getTripsByUser et écrit un test dans test_Tripservice.py.
+
+
+
+
+TripService.getTripsByUser n'est pas testable, parce que un singleton logged_user est utilisé dans la fonction.
 Extrait cette logged_user dans un methode de TripService, et pour notre test implemente le dans TestTripService.
 
 == Tache 2
