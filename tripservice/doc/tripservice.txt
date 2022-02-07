@@ -25,6 +25,13 @@ le setup du tests serait trop compliqué.
 == Tache 1:
 
 Trouve la branche la plus courte dans TripService.getTripsByUser et écrit un test dans test_Tripservice.py.
+test_should_throw_an_exception_when_user_is_not_logged_in:
+
+
+== Tache 1bis:
+
+La difficulté est qu'il faut créer une méthode getLoggedInUser pour l'implementer dans votre TestableTripService.
+
 
 
 
