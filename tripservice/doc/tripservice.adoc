@@ -1,0 +1,26 @@
+= Kata - Tripservice
+
+== Business Requirements
+
+Reseau sociale pour voyageurs
+
+. Pour voir du contenu utilisateur doit se connecter
+. Pour voir les voyages (trips) de'un autre utilisateur, on doit etre son ami.
+
+
+== Tache 1
+
+Pour pouvoir faire des changements dans le code on veut tester.
+Commence à tester la branche la plus courte
+
+getTripsByUser n'est pas testable, parce que un singleton logged_user est utilisé dans la fonction.
+Extrait cette logged_user dans un methode de TripService, et pour notre test implemente le dans TestTripService.
+
+== Tache 2
+
+Découvre un 'feature-envy' dans le code, et corrige-le. 
+
+
+== Conclusion
+
+. Evite de donner accès aux détails d'implémentation d'une classe
