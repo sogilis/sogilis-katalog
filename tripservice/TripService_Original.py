@@ -12,7 +12,7 @@ class TripService:
             for friend in user.getFriends():
                 if friend is logged_user:
                     isFriend = True
-                    break;
+                    break
             if isFriend:
                 tripList = TripDAO.findTripsByUser(user)
             return tripList
