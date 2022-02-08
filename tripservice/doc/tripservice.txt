@@ -84,6 +84,9 @@ Supprime la variable tripList pour obtenir deux return dans le if et else.
 Tache 10bis:
 Inline le variable logged_in_user aussi.
 
+Tache 11:
+Extrait un methode privé pour noTrips() dans TripService.
+
 
 
 
