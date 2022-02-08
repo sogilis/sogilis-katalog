@@ -91,31 +91,3 @@ Note: le meme language dans le code et les tests et maintenant utilisé!
 Tache 12:
 Maintenant on commence à améliorer le design: Passe le loggedInUser en paramètre dans getTripsByUser.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TripService.getTripsByUser n'est pas testable, parce que un singleton logged_user est utilisé dans la fonction.
-Extrait cette logged_user dans un methode de TripService, et pour notre test implemente le dans TestTripService.
-
-== Tache 2
-
-Découvre un 'feature-envy' dans le code, et corrige-le. 
-
-
-== Conclusion
-
-. Evite de donner accès aux détails d'implémentation d'une classe
