@@ -86,6 +86,15 @@ Inline le variable logged_in_user aussi.
 
 Tache 11:
 Extrait un methode privé pour noTrips() dans TripService.
+Note: le meme language dans le code et les tests et maintenant utilisé!
+
+Tache 12:
+Maintenant on commence à améliorer le design: Passe le loggedInUser en paramètre dans getTripsByUser.
+
+
+
+
+
 
 
 
