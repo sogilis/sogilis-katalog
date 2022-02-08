@@ -6,13 +6,12 @@ from UserNotLoggedInException import UserNotLoggedInException
 class TripService:
     def getTripsByUser(self, user):
         logged_in_user = self.getLoggedInUser()
-        tripList = []
-        if logged_in_user:
-            if user.isFriendsWith(logged_in_user):
-                tripList = self.findTripsByUser(user)
-            return tripList
-        else:
+        if logged_in_user == None:
             raise UserNotLoggedInException()
+        tripList = []
+        if user.isFriendsWith(logged_in_user):
+            tripList = self.findTripsByUser(user)
+        return tripList
 
     def getLoggedInUser(self):
         return UserSession.getInstance().getLoggedUser()
