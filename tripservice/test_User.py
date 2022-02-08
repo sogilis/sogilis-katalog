@@ -14,7 +14,9 @@ class MyTestCase(unittest.TestCase):
     PAUL = User()
 
     def test_users_are_friends(self):
-        pass
+        user = UserBuilder.aUser().friendsWith(
+            [MyTestCase.PAUL, MyTestCase.BOB]).build()
+        self.assertTrue(user.isFriendsWith(MyTestCase.BOB), "friends with Bob")
 
 
 if __name__ == '__main__':

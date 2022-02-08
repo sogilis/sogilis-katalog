@@ -69,6 +69,8 @@ Commence à mettre en place un test pour le class User.
 Implemente test_users_are_not_friends en utilisant TDD, met une fonction isFriendsWith dans User.
 
 Tache 7:
+Implemente test_users_are_friends and implemente isFriendsWith dans User.
+
 
 
 
