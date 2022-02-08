@@ -11,11 +11,9 @@ from User import User
 class TripServiceTest(TestCase):
     def setUp(self) -> None:
         self.tripService = TestableTripService()
-        self.tripService.setLoggedInUser(TripServiceTest.REGISTERED_USER)
         pass
 
     def test_should_throw_an_exception_when_user_is_not_logged_in(self):
-        self.tripService.setLoggedInUser(TripServiceTest.GUEST)
         self.assertRaises(UserNotLoggedInException,
                           self.tripService.getTripsByUser, TripServiceTest.UNUSED_USER, TripServiceTest.GUEST)
 
@@ -45,11 +43,5 @@ class TripServiceTest(TestCase):
 
 
 class TestableTripService(TripService):
-    def getLoggedInUser(self):
-        return self.loggedInUser
-
-    def setLoggedInUser(self, logged_in_user):
-        self.loggedInUser = logged_in_user
-
     def findTripsByUser(self, user):
         return user.getTrips()

@@ -5,15 +5,12 @@ from UserNotLoggedInException import UserNotLoggedInException
 
 class TripService:
     def getTripsByUser(self, user, loggedInUser):
-        if self.getLoggedInUser() == None:
+        if loggedInUser == None:
             raise UserNotLoggedInException()
-        if user.isFriendsWith(self.getLoggedInUser()):
+        if user.isFriendsWith(loggedInUser):
             return self.findTripsByUser(user)
         else:
             return self._noTrips()
-
-    def getLoggedInUser(self):
-        return UserSession.getInstance().getLoggedUser()
 
     def findTripsByUser(self, user):
         return TripDAO.findTripsByUser(user)
