@@ -10,6 +10,7 @@ from User import User
 class TripServiceTest(TestCase):
     def setUp(self) -> None:
         self.tripService = TestableTripService()
+        self.tripService.setLoggedInUser(TripServiceTest.REGISTERED_USER)
         pass
 
     def test_should_throw_an_exception_when_user_is_not_logged_in(self):
@@ -18,7 +19,6 @@ class TripServiceTest(TestCase):
                           self.tripService.getTripsByUser, TripServiceTest.UNUSED_USER)
 
     def test_should_not_return_any_trips_when_users_are_not_friends(self):
-        self.tripService.setLoggedInUser(TripServiceTest.REGISTERED_USER)
         friend = User()
         friend.addFriend(TripServiceTest.ANOTHER_USER)
         friend.addTrip(TripServiceTest.TO_BRAZIL)
@@ -26,12 +26,9 @@ class TripServiceTest(TestCase):
         self.assertEqual(len(trips), 0, "no trips")
 
     def test_should_return_friend_trips_when_users_are_friends(self):
-        self.tripService.setLoggedInUser(TripServiceTest.REGISTERED_USER)
-        friend = User()
-        friend.addFriend(TripServiceTest.ANOTHER_USER)
-        friend.addFriend(TripServiceTest.REGISTERED_USER)
-        friend.addTrip(TripServiceTest.TO_BRAZIL)
-        friend.addTrip(TripServiceTest.TO_LONDON)
+        friend = UserBuilder.aUser()\
+            .friendsWith([TripServiceTest.ANOTHER_USER, TripServiceTest.REGISTERED_USER])\
+            .withTrips([TripServiceTest.TO_BRAZIL, TripServiceTest.TO_LONDON]).build()
 
         trips = self.tripService.getTripsByUser(friend)
         self.assertEqual(len(trips), 2, "two trips")
@@ -53,3 +50,30 @@ class TestableTripService(TripService):
 
     def findTripsByUser(self, user):
         return user.getTrips()
+
+
+class UserBuilder:
+    def aUser():
+        return UserBuilder()
+
+    def friendsWith(self, friends):
+        self.friends = friends
+        return self
+
+    def withTrips(self, trips):
+        self.trips = trips
+        return self
+
+    def build(self):
+        user = User()
+        self._addTripsTo(user)
+        self._addFriendsTo(user)
+        return user
+
+    def _addFriendsTo(self, user):
+        for friend in self.friends:
+            user.addFriend(friend)
+
+    def _addTripsTo(self, user):
+        for trip in self.trips:
+            user.addTrip(trip)
