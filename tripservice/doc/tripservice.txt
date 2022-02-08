@@ -25,18 +25,69 @@ le setup du tests serait trop compliqué.
 == Tache 1:
 
 Trouve la branche la plus courte dans TripService.getTripsByUser et écrit un test dans test_Tripservice.py.
+test_should_throw_an_exception_when_user_is_not_logged_in:
 
 
+== Tache 1bis:
+
+La difficulté est qu'il faut créer une méthode getLoggedInUser pour l'implementer dans votre TestableTripService.
+
+== Tache 2:
+
+Create the concept of a GUEST user to make test_should_throw_an_exception_when_user_is_not_logged_in clearer.
+
+== Tache 3:
+
+Trouve la branche la plus courte pas encore testé: implemente test_should_not_return_any_trips_when_users_are_not_friends.
+
+== Tache 3bis:
+
+Move tripService = TestableTripService() to the test setup.
+
+== Tache 4:
+
+Teste la dernière fonctionnalité: 
+test_should_return_friend_trips_when_users_are_friends
+Note: TripDAO should be extracted in a method again.
+
+Tache 5:
+Utilise le pattern UserBuilder pour créér le setup du test:
+friend = UserBuilder.aUser()\
+            .friendsWith([TripServiceTest.ANOTHER_USER, TripServiceTest.REGISTERED_USER])\
+            .withTrips([TripServiceTest.TO_BRAZIL, TripServiceTest.TO_LONDON]).build()
 
 
-TripService.getTripsByUser n'est pas testable, parce que un singleton logged_user est utilisé dans la fonction.
-Extrait cette logged_user dans un methode de TripService, et pour notre test implemente le dans TestTripService.
+Tache 6:
+ASTUCE : Commence à refactorer la branche le plus profonde.
+https://www.youtube.com/watch?v=_NnElPO5BU0&t=1996s
 
-== Tache 2
+La branche la plus profonde ne dépend pas sur autres choses, et lentement le code peut devenir plus compact.
 
-Découvre un 'feature-envy' dans le code, et corrige-le. 
+Cherche un feature envie de User class et bouge le code.
+Commence à mettre en place un test pour le class User.
 
+Implemente test_users_are_not_friends en utilisant TDD, met une fonction isFriendsWith dans User.
 
-== Conclusion
+Tache 7:
+Implemente test_users_are_friends and implemente isFriendsWith dans User.
 
-. Evite de donner accès aux détails d'implémentation d'une classe
+Tache 8:
+Use isFriendsWith dans TripService.getTripsByUser
+
+Tache 9:
+Use a guard clause for the throwing of the exception of UserNotLoggedInException:
+A guard close is a statement at the beginning of a function which is throwing an exception immediately.
+
+Tache 10:
+Supprime la variable tripList pour obtenir deux return dans le if et else.
+
+Tache 10bis:
+Inline le variable logged_in_user aussi.
+
+Tache 11:
+Extrait un methode privé pour noTrips() dans TripService.
+Note: le meme language dans le code et les tests et maintenant utilisé!
+
+Tache 12:
+Maintenant on commence à améliorer le design: Passe le loggedInUser en paramètre dans getTripsByUser.
+
