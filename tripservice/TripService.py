@@ -4,7 +4,7 @@ from UserNotLoggedInException import UserNotLoggedInException
 
 
 class TripService:
-    def getTripsByUser(self, user):
+    def getTripsByUser(self, user, loggedInUser):
         if self.getLoggedInUser() == None:
             raise UserNotLoggedInException()
         if user.isFriendsWith(self.getLoggedInUser()):
