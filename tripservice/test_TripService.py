@@ -15,13 +15,13 @@ class TripServiceTest(TestCase):
 
     def test_should_throw_an_exception_when_user_is_not_logged_in(self):
         self.assertRaises(UserNotLoggedInException,
-                          self.tripService.getTripsByUser, TripServiceTest.UNUSED_USER, TripServiceTest.GUEST)
+                          self.tripService.getFriendsTrips, TripServiceTest.UNUSED_USER, TripServiceTest.GUEST)
 
     def test_should_not_return_any_trips_when_users_are_not_friends(self):
         friend = UserBuilder.aUser().friendsWith(
             [TripServiceTest.ANOTHER_USER])\
             .withTrips([TripServiceTest.TO_BRAZIL]).build()
-        trips = self.tripService.getTripsByUser(
+        trips = self.tripService.getFriendsTrips(
             friend, TripServiceTest.REGISTERED_USER)
         self.assertEqual(len(trips), 0, "no trips")
 
@@ -30,7 +30,7 @@ class TripServiceTest(TestCase):
             .friendsWith([TripServiceTest.ANOTHER_USER, TripServiceTest.REGISTERED_USER])\
             .withTrips([TripServiceTest.TO_BRAZIL, TripServiceTest.TO_LONDON]).build()
 
-        trips = self.tripService.getTripsByUser(
+        trips = self.tripService.getFriendsTrips(
             friend, TripServiceTest.REGISTERED_USER)
         self.assertEqual(len(trips), 2, "two trips")
 
