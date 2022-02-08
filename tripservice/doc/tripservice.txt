@@ -71,6 +71,11 @@ Implemente test_users_are_not_friends en utilisant TDD, met une fonction isFrien
 Tache 7:
 Implemente test_users_are_friends and implemente isFriendsWith dans User.
 
+Tache 8:
+Use isFriendsWith dans TripService.getTripsByUser
+
+
+
 
 
 
