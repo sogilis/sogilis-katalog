@@ -10,10 +10,13 @@ class TripService:
         if user.isFriendsWith(self.getLoggedInUser()):
             return self.findTripsByUser(user)
         else:
-            return []
+            return self._noTrips()
 
     def getLoggedInUser(self):
         return UserSession.getInstance().getLoggedUser()
 
     def findTripsByUser(self, user):
         return TripDAO.findTripsByUser(user)
+
+    def _noTrips(self):
+        return []
