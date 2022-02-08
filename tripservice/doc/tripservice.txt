@@ -78,6 +78,9 @@ Tache 9:
 Use a guard clause for the throwing of the exception of UserNotLoggedInException:
 A guard close is a statement at the beginning of a function which is throwing an exception immediately.
 
+Tache 10:
+Supprime la variable tripList pour obtenir deux return dans le if et else.
+
 
 
 
