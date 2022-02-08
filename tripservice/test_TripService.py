@@ -19,9 +19,9 @@ class TripServiceTest(TestCase):
                           self.tripService.getTripsByUser, TripServiceTest.UNUSED_USER)
 
     def test_should_not_return_any_trips_when_users_are_not_friends(self):
-        friend = User()
-        friend.addFriend(TripServiceTest.ANOTHER_USER)
-        friend.addTrip(TripServiceTest.TO_BRAZIL)
+        friend = UserBuilder.aUser().friendsWith(
+            [TripServiceTest.ANOTHER_USER])\
+            .withTrips([TripServiceTest.TO_BRAZIL]).build()
         trips = self.tripService.getTripsByUser(friend)
         self.assertEqual(len(trips), 0, "no trips")
 
