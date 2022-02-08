@@ -8,8 +8,7 @@ class TripService:
         logged_in_user = self.getLoggedInUser()
         tripList = []
         if logged_in_user:
-            isFriend = user.isFriendsWith(logged_in_user)
-            if isFriend:
+            if user.isFriendsWith(logged_in_user):
                 tripList = self.findTripsByUser(user)
             return tripList
         else:
