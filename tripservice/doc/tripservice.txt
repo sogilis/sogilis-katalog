@@ -81,6 +81,9 @@ A guard close is a statement at the beginning of a function which is throwing an
 Tache 10:
 Supprime la variable tripList pour obtenir deux return dans le if et else.
 
+Tache 10bis:
+Inline le variable logged_in_user aussi.
+
 
 
 
