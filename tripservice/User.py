@@ -17,4 +17,4 @@ class User:
         return self.trips
 
     def isFriendsWith(self, user):
-        return False
+        return user in self.friends
