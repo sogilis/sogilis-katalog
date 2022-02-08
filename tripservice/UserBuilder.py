@@ -1,6 +1,11 @@
 from User import User
 
+
 class UserBuilder:
+    def __init__(self):
+        self.trips = []
+        self.friends = []
+
     def aUser():
         return UserBuilder()
 

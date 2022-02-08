@@ -15,3 +15,6 @@ class User:
 
     def getTrips(self):
         return self.trips
+
+    def isFriendsWith(self, user):
+        return False
