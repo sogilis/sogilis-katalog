@@ -57,6 +57,19 @@ friend = UserBuilder.aUser()\
             .withTrips([TripServiceTest.TO_BRAZIL, TripServiceTest.TO_LONDON]).build()
 
 
+Tache 6:
+ASTUCE : Commence à refactorer la branche le plus profonde.
+https://www.youtube.com/watch?v=_NnElPO5BU0&t=1996s
+
+La branche la plus profonde ne dépend pas sur autres choses, et lentement le code peut devenir plus compact.
+
+Cherche un feature envie de User class et bouge le code.
+Commence à mettre en place un test pour le class User.
+
+Implemente test_users_are_not_friends en utilisant TDD, met une fonction isFriendsWith dans User.
+
+Tache 7:
+
 
 
 
