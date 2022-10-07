@@ -1,0 +1,18 @@
+[
+	{
+		"id": "AB-A_B",
+		"refunds": [ { "from": "B", "to": "A", "amount": 1.0 }]
+	},
+	{
+		"id":"AB-A_B-B_A",
+		"refunds": []
+	},
+	{
+		"id": "ABC-A_BC",
+		"refunds": [ { "from": "Bob", "to": "Alice", "amount": 1.0 }, { "from": "Charlie", "to": "Alice", "amount": 1.0 }]
+	},
+	{
+		"id": "ABC-A_BC-A_C",
+		"refunds": [ { "from": "Bob", "to": "Alice", "amount": 1.0 }, { "from": "Charlie", "to": "Alice", "amount": 2.0 }]
+	}
+]
