@@ -1,6 +1,6 @@
 # Tricount Kata
 
-Good accounts make good friends : build a replica of the infamous tricount application
+Good accounts make good friends : build a replica of the infamous [tricount application](https://www.tricount.com/fr/faire-les-comptes-entre-amis).
 
 ## Problem specification
 
