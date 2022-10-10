@@ -3,7 +3,7 @@
 		"id": "AB-A_B",
 		"users": ["Alice", "Bob"],
 		"expanses": [
-			{ "from": "Alice", "to": ["Bob"], "amount": 1.0 },
+			{ "from": "Alice", "to": ["Bob"], "amount": 1.0 }
 		]
 	},
 	{
@@ -11,14 +11,14 @@
 		"users": ["Alice", "Bob"],
 		"expanses": [
 			{ "from": "Alice", "to": ["Bob"], "amount": 1.0 },
-			{ "from": "Bob", "to": ["Alice"], "amount": 1.0 },
+			{ "from": "Bob", "to": ["Alice"], "amount": 1.0 }
 		]
 	},
 	{
 		"id": "ABC-A_BC",
 		"users": ["Alice", "Bob", "Charlie"],
 		"expanses": [
-			{ "from": "Alice", "to": ["Alice", "Bob", "Charlie"], "amount": 3.0 },
+			{ "from": "Alice", "to": ["Alice", "Bob", "Charlie"], "amount": 3.0 }
 		]
 	},
 	{
@@ -26,7 +26,7 @@
 		"users": ["Alice", "Bob", "Charlie"],
 		"expanses": [
 			{ "from": "Alice", "to": ["Alice", "Bob", "Charlie"], "amount": 3.0 },
-			{ "from": "Alice", "to": ["Alice", "Charlie"], "amount": 2.0 },
+			{ "from": "Alice", "to": ["Alice", "Charlie"], "amount": 2.0 }
 		]
 	}
 ]
