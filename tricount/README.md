@@ -8,7 +8,7 @@ tricounts.json has some input samples, solutions.json holds the corresponding so
 
 Format explanation (feel free to make your own representation of the problem as your application evolves):
 
-Consider the entry with id "AB_BC" in "tricounts.json":
+Consider an entry in "tricounts.json":
 ```
 {
 	"id": "AB-A_B",
