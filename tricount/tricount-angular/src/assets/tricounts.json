@@ -1,32 +1,29 @@
 [
 	{
-		"id": "AB-A_B",
+		"id": "tricount-1",
+		"name": "Soirée pizza",
 		"users": ["Alice", "Bob"],
 		"expanses": [
-			{ "from": "Alice", "to": ["Bob"], "amount": 1.0 }
+			{ "from": "Alice", "amount": 20.0 }
 		]
 	},
 	{
-		"id": "AB-A_B-B_A",
+		"id": "tricount-2",
+		"name": "Week-end à la plage",
 		"users": ["Alice", "Bob"],
 		"expanses": [
-			{ "from": "Alice", "to": ["Bob"], "amount": 1.0 },
-			{ "from": "Bob", "to": ["Alice"], "amount": 1.0 }
+			{ "from": "Alice", "amount": 50.0 },
+			{ "from": "Bob", "amount": 50.0 }
 		]
 	},
 	{
-		"id": "ABC-A_BC",
+		"id": "tricount-3",
 		"users": ["Alice", "Bob", "Charlie"],
+		"name": "Vacances à la montagne",
 		"expanses": [
-			{ "from": "Alice", "to": ["Alice", "Bob", "Charlie"], "amount": 3.0 }
-		]
-	},
-	{
-		"id": "ABC-A_BC-A_C",
-		"users": ["Alice", "Bob", "Charlie"],
-		"expanses": [
-			{ "from": "Alice", "to": ["Alice", "Bob", "Charlie"], "amount": 3.0 },
-			{ "from": "Alice", "to": ["Alice", "Charlie"], "amount": 2.0 }
+			{ "from": "Alice", "amount": 100.0 },
+			{ "from": "Bob", "amount": 200.0 },
+			{ "from": "Charlie", "amount": 60.0 }
 		]
 	}
 ]

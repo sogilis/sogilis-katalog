@@ -14,7 +14,7 @@ Consider an entry in "tricounts.json":
 	"id": "AB-A_B",
 	"users": ["Alice", "Bob"],
 	"expanses": [
-		{ "from": "A", "to": ["B"], "amount": 1.0 },
+		{ "from": "Alice", "amount": 1.0 },
 	]
 }
 ```
@@ -23,10 +23,12 @@ The corresponding solution in "solutions.json" is:
 ```
 {
 	"id": "AB-A_B",
-	"refunds": [ { "from": "Bob", "to": "Alice", "amount": 1.0 }]
+	"refunds": [ { "from": "Bob", "amount": 1.0 }]
 }
 ```
 Which means "Bob must give Alice 1.0 to solve all the debts of this tricount"
+
+### Bonus excercice
 
 Let's see a more complex example :
 ```
