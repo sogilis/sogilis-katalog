@@ -2,3 +2,7 @@ node_modules
 .idea
 target
 .venv
+bin/
+obj/
+/tripservice/__pycache__
+/tripservice/.vscode
