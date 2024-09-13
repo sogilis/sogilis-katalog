@@ -1,0 +1,16 @@
+# Filename: nucleo-f446re.resc
+
+$CONFIG_FILE?=@config/nucleo-f446re.repl
+$FIRMWARE_FILE?=@build/debug/bin/firmware.elf
+
+mach create
+machine LoadPlatformDescription $CONFIG_FILE
+
+sysbus LoadELF $FIRMWARE_FILE
+
+machine StartGdbServer 3333
+
+logLevel 0
+logLevel -1 sysbus.gpioPortA.userLed
+
+start

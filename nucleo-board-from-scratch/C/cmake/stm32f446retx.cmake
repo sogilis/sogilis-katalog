@@ -1,0 +1,9 @@
+# stm32f446retx
+
+set(CPU cortex-m4 CACHE STRING "")
+set(FPU fpv4-sp-d16 CACHE STRING "")
+set(FLOAT_ABI hard CACHE STRING "")
+
+set(OPENOCD_TARGET_BOARD stm32f4x CACHE STRING "")
+
+set(LINKER_FILE ${CMAKE_CURRENT_SOURCE_DIR}/config/stm32f446retx.ld)
