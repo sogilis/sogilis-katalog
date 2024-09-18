@@ -43,7 +43,7 @@ $ cmake -B build/test -DCMAKE_BUILD_TYPE=test
 ```bash
 $ cmake --build build/test
 ```
-3. Run a test suite :
+3. Run the test suite :
 ```bash
-$ build/test/bin/<test_suite_name>
+$ ctest -V --test-dir build/test
 ```
