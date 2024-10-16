@@ -1,3 +1,7 @@
+import {getTricounts} from './tricount';
+
 describe('useTricount', () => {
-  it('should return tricounts', () => {});
-}
+  it('should return tricounts', () => {
+    getTricounts();
+  });
+});
