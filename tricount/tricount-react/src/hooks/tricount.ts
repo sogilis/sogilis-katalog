@@ -13,3 +13,5 @@ export function useTricount() {
 function getTricounts() {
     return Promise.reject("Method not implemented.");
 }
+
+export { getTricounts }
