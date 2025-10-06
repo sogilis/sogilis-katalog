@@ -7,41 +7,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppTest {
 
-    @RegisterExtension
-    static SystemExtension system = new SystemExtension();
-
     @Test
     void empty() {
-        system.provideInputLine("");
-        App.main(new String[]{});
-        assertEquals("", system.getOutput());
+        assertEquals(null, App.convert(""));
     }
 
     @Test
     void one() {
-        system.provideInputLine("I");
-        App.main(new String[]{});
-        assertEquals("1", system.getOutput());
+        assertEquals(1, App.convert("I"));
     }
 
     @Test
     void two() {
-        system.provideInputLine("II");
-        App.main(new String[]{});
-        assertEquals("2", system.getOutput());
+        assertEquals(2, App.convert("II"));
     }
 
     @Test
     void three() {
-        system.provideInputLine("III");
-        App.main(new String[]{});
-        assertEquals("3", system.getOutput());
+        assertEquals(3, App.convert("III"));
     }
 
     @Test
     void four() {
-        system.provideInputLine("IIII");
-        App.main(new String[]{});
-        assertEquals("4", system.getOutput());
+        assertEquals(4, App.convert("IIII"));
     }
 }

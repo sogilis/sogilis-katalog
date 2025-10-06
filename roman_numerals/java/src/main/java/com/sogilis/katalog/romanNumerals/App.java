@@ -3,14 +3,11 @@
  */
 package com.sogilis.katalog.romanNumerals;
 
-import java.util.Scanner;
-
 public class App {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String input = in.nextLine();
+    public static Integer convert(String input) {
         if (!input.isEmpty()) {
-            System.out.println(input.length());
+            return input.length();
         }
+        return null;
     }
 }
