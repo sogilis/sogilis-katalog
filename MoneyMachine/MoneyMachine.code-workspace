@@ -1,0 +1,17 @@
+{
+    "folders": [
+        { "name": "java", "path": "java" },
+        { "name": "kotlin", "path": "kotlin" },
+        { "name": "python", "path": "python" }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/target": true,
+            "**/build": true,
+            "**/.gradle": true,
+            "**/.kotlin": true,
+            "**/__pycache__": true,
+            "**/.pytest_cache": true
+        }
+    }
+}
