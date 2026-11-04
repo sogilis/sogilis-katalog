@@ -4,7 +4,16 @@ This repository purpose is to contain katas used to animate dojos in Sogilis
 
 ## Usage
 
-Choose a kata, a language and start hacking !
+1. Clone this repository
+
+```bash
+git clone https://github.com/sogilis/sogilis-katalog.git
+cd sogilis-katalog
+git submodule init
+git submodule update
+```
+
+2. Choose a kata, a language and start hacking !
 
 ## Contributing
 
