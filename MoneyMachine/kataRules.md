@@ -1,3 +1,4 @@
+TEST !!
 # Kata Money Machine — distributeur automatique (version euro)
 
 Construire la logique d'un distributeur automatique qui accepte de l'argent, rend la monnaie, gère son stock et distribue des produits.
